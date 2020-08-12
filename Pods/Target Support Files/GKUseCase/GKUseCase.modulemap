@@ -1,0 +1,6 @@
+framework module GKUseCase {
+  umbrella header "GKUseCase-umbrella.h"
+
+  export *
+  module * { export * }
+}

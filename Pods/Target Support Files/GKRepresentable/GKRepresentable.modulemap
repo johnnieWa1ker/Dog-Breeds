@@ -1,0 +1,6 @@
+framework module GKRepresentable {
+  umbrella header "GKRepresentable-umbrella.h"
+
+  export *
+  module * { export * }
+}

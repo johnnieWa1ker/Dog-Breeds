@@ -1,0 +1,62 @@
+PODS:
+  - GKCoreData (1.0.5):
+    - GKExtensions (~> 1.1.0)
+  - GKExtensions (1.1.0)
+  - GKNetwork (1.0.0):
+    - GKExtensions (~> 1.1.0)
+  - GKRepresentable (1.0.1):
+    - GKExtensions (~> 1.1.0)
+  - GKUseCase (1.0.1):
+    - GKCoreData (~> 1.0.4)
+    - GKExtensions (~> 1.1.0)
+    - GKNetwork (~> 1.0.0)
+  - GKViper (1.0.0):
+    - GKExtensions (~> 1.1.0)
+  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - QuickLayout (3.0.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
+
+DEPENDENCIES:
+  - GKRepresentable (~> 1.0.1)
+  - GKUseCase (~> 1.0.1)
+  - GKViper (~> 1.0.0)
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - SVProgressHUD
+  - SwiftEntryKit
+
+SPEC REPOS:
+  trunk:
+    - GKCoreData
+    - GKExtensions
+    - GKNetwork
+    - GKRepresentable
+    - GKUseCase
+    - GKViper
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - QuickLayout
+    - SVProgressHUD
+    - SwiftEntryKit
+
+SPEC CHECKSUMS:
+  GKCoreData: c9d4315c9d425bac1dca8448f3ffac0d13c3644b
+  GKExtensions: e2336b4ae2a62bfc968fd1a4ced30365ffb3f73b
+  GKNetwork: 8cf98586bc75269e45dd36e4aed047eb67f6cfc1
+  GKRepresentable: 6dcaa093a142604c5f2caa24a3839512331aa2eb
+  GKUseCase: b215028ecbee5c5b48f2e7c5f4b728acd7dc4f69
+  GKViper: 1ffe86f32753c4fc834c1325ee1892806c9ff1aa
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
+
+PODFILE CHECKSUM: d0ec7dd1abf7c3d3ca85608463691c1219ae1d26
+
+COCOAPODS: 1.9.3
