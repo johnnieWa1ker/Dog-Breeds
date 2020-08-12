@@ -2,12 +2,12 @@
 [![Build Status](https://img.shields.io/badge/Swift-5.1.1-orange.svg)](https://swift.org)
 
 A test project in which I render the data retrieved from the dog.ceo API.
-
 In it, I want to focus on using the UITableView and UICollectionView based interfaces.
 
   <p float="right">
-    <img src="Dog%20Breeds/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/Demo.imageset/demo1.png" width="32%"/>
+    <img src="Dog%20Breeds/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/Demo/demo1.imageset/demo1.png" width="32%"/>
   </p>
+  
 
 ## 🏃‍♂️ Getting Started
 
