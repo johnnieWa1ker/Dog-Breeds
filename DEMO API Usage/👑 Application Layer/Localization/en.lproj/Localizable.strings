@@ -1,0 +1,61 @@
+/* 
+  Localizable.strings
+  //  DEMO API Usage
+  //
+  //  Created by Johnnie Walker on 12.08.2020.
+  //  Copyright © 2020 JW. All rights reserved.
+*/
+
+// MARK: - Theme
+"APP_THEME_LIGHT"                   = "Light";
+"APP_THEME_DARK"                    = "Dark";
+
+// MARK: - Language
+"APP_LANG_ENG"                      = "English";
+"APP_LANG_RUS"                      = "Russian";
+
+// MARK: - ErrorMessages
+"EM_TOKEN_NOT_FOUND"                = "Token not found";
+"EM_BAD_REQUEST"                    = "Bad request";
+"EM_UNAUTHORIZED"                   = "Unauthorized";
+"EM_INTERNAL_SERVER"                = "Internal server error";
+"EM_PUSH_SUBSCRIBE"                 = "Push subscribe failed";
+"EM_PUSH_UNSUBSCRIBE"               = "Push unsubscribe failed";
+"EM_FIREBASE_AUTH"                  = "Firebase auth error";
+"EM_NO_INTERNET"                    = "No internet connection";
+"EM_PROFILE_NOT_FILLED"             = "Profile not completed";
+"EM_USER_BLOCKED"                   = "User is locked";
+"EM_PHONE_NUMBER"                   = "Invalid phone number";
+"EM_SMS_CODE"                       = "Invalid SMS code";
+"EM_TO_SAVE_DATA"                   = "Failed to save data";
+"EM_POP_INV_EMAIL"                  = "The data entered in the email field does not look like a real email. Please use real data - they will be required later for account verification! Thank!";
+"EM_EMPTY_RESULT"                   = "The response from the server was empty or incorrectly decoded";
+"EM_LOW_IOS_VERSION"                = "Your iOS version is out of date, try updating your device and trying again";
+
+// MARK: - General
+"OK"                                = "OK";
+"SAVE"                              = "Save";
+"CANCEL"                            = "Cancel";
+"CLOSE"                             = "Close";
+"ATTENSION"                         = "Attention!";
+"UNKNOWN"                           = "Unknown";
+"LOADING"                           = "Loading";
+"REFRESH"                           = "Refresh";
+"TRY_AGAIN"                         = "Try Again";
+"YES"                               = "Yes";
+"NO"                                = "No";
+"ERROR"                             = "Error";
+"WARNING"                           = "Warning";
+"CONTINUE"                          = "Continue";
+"SEARCH"                            = "Search";
+"NEXT"                              = "Next";
+"CONFIRM"                           = "Confirm";
+"INFO"                              = "Information";
+"ENTER"                             = "Enter";
+
+// MARK: - Disconnect
+"DISCONNECT_TITLE"                  = "There are problems with the internet connection. Please try again when the network becomes available.";
+
+// MARK: - Sex
+"SEX_MALE"                          = "Male";
+"SEX_FEMALE"                        = "Female";

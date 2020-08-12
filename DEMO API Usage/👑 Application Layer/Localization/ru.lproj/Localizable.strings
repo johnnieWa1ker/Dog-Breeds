@@ -1,0 +1,61 @@
+/* 
+  Localizable.strings
+  //  DEMO API Usage
+  //
+  //  Created by Johnnie Walker on 12.08.2020.
+  //  Copyright © 2020 JW. All rights reserved.
+*/
+
+// MARK: - Theme
+"APP_THEME_LIGHT"                   = "Светлая";
+"APP_THEME_DARK"                    = "Темная";
+
+// MARK: - Language
+"APP_LANG_ENG"                      = "Английский";
+"APP_LANG_RUS"                      = "Русский";
+
+// MARK: - ErrorMessages
+"EM_TOKEN_NOT_FOUND"                = "Токен не найден";
+"EM_BAD_REQUEST"                    = "Неверный запрос";
+"EM_UNAUTHORIZED"                   = "Не авторизован";
+"EM_INTERNAL_SERVER"                = "Внутренняя ошибка сервера";
+"EM_PUSH_SUBSCRIBE"                 = "Ошибка принудительной подписки";
+"EM_PUSH_UNSUBSCRIBE"               = "Ошибка принудительной отмены подписки";
+"EM_FIREBASE_AUTH"                  = "Ошибка аутентификации Firebase";
+"EM_NO_INTERNET"                    = "Нет подключения к интернету";
+"EM_PROFILE_NOT_FILLED"             = "Профиль не заполнен";
+"EM_USER_BLOCKED"                   = "Пользователь заблокирован";
+"EM_PHONE_NUMBER"                   = "Некорректный номер телефона";
+"EM_SMS_CODE"                       = "Некорректный SMS код";
+"EM_TO_SAVE_DATA"                   = "Не удалось сохранить данные";
+"EM_POP_INV_EMAIL"                  = "Введенные данные в поле email не похожи на реальный email. Пожалуйста используйте реальные данные - они потребуются далее для верификации аккаунта! Спасибо!";
+"EM_EMPTY_RESULT"                   = "Ответ от сервера был с пустым значением, или неправильно декодирован";
+"EM_LOW_IOS_VERSION"                = "Ваша версия iOS устарела, попробуйте обновить устройство и попробовать еще раз";
+
+// MARK: - General
+"OK"                                = "OK";
+"SAVE"                              = "Сохранить";
+"CANCEL"                            = "Отмена";
+"CLOSE"                             = "Закрыть";
+"ATTENSION"                         = "Внимание!";
+"UNKNOWN"                           = "Неизвестно";
+"LOADING"                           = "Загрузка";
+"REFRESH"                           = "Обновить";
+"TRY_AGAIN"                         = "Попробовать еще";
+"YES"                               = "Да";
+"NO"                                = "Нет";
+"ERROR"                             = "Ошибка";
+"WARNING"                           = "Предупреждение";
+"CONTINUE"                          = "Продолжить";
+"SEARCH"                            = "Поиск";
+"NEXT"                              = "Далее";
+"CONFIRM"                           = "Подтвердить";
+"INFO"                              = "Информация";
+"ENTER"                             = "Войти";
+
+// MARK: - Disconnect
+"DISCONNECT_TITLE"                  = "Наблюдаются проблемы с подключением к интернету. Попробуйте повторить попытку, когда сеть станет доступной.";
+
+// MARK: - Sex
+"SEX_MALE"                          = "Мужской";
+"SEX_FEMALE"                        = "Женский";
