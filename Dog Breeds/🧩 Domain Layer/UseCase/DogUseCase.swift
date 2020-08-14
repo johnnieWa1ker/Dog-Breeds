@@ -16,16 +16,14 @@ protocol DogUseCaseInput: UseCaseInput {
 
 protocol DogUseCaseOutput: UseCaseOutput {
     func provideBreeds(_ result: [DogModel])
-    func provideImageOfBreed(_ result: [ImageModel])
-    func provideImageOfSubbreed(_ result: [ImageModel])
+    func provideImage(_ result: [ImageModel])
     func provideError(_ error: Error)
     func noInternetConnection()
 }
 
 extension DogUseCaseOutput {
     func provideBreeds(_ result: [DogModel]) { }
-    func provideImageOfBreed(_ result: [ImageModel]) { }
-    func provideImageOfSubbreed(_ result: [ImageModel]) { }
+    func provideImage(_ result: [ImageModel]) { }
     func provideError(_ error: Error) { }
 }
 
@@ -68,9 +66,9 @@ class DogUseCase: UseCase, DogUseCaseInput {
             return
         }
         
-        self.dogRepository.getBreeds { (result, error) in
+        self.dogRepository.getBreedImages(breed: breed) { (result, error) in
             if let result = result, error == nil {
-                self.output?.provideBreeds(result)
+                self.output?.provideImage(result)
             } else if let error = error {
                 self.output?.provideError(error)
             }
@@ -83,9 +81,9 @@ class DogUseCase: UseCase, DogUseCaseInput {
             return
         }
         
-        self.dogRepository.getBreeds { (result, error) in
+        self.dogRepository.getSubbreedImages(breed: breed, subbreed: subbreed) { (result, error) in
             if let result = result, error == nil {
-                self.output?.provideBreeds(result)
+                self.output?.provideImage(result)
             } else if let error = error {
                 self.output?.provideError(error)
             }
