@@ -13,7 +13,7 @@ class DetailViewModel: ViperViewModel {
     // MARK: - Props
     let breed: String
     let subbreed: String?
-    let images: [UIImage] = []
+    var images: [ImageModel] = []
     
     // MARK: - Initialization
     init(breed: String, subbreed: String?) {

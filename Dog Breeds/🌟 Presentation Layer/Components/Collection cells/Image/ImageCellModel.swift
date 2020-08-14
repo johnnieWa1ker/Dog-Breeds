@@ -22,10 +22,10 @@ class ImageCellModel: CollectionCellModel {
     }
     
     // MARK: - Props
-    let image: UIImage
+    let imageURL: URL
     
     // MARK: - Initialization
-    init(image: UIImage) {
-        self.image = image
+    init(imageURL: URL) {
+        self.imageURL = imageURL
     }
 }

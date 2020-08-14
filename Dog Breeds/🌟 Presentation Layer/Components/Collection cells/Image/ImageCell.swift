@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import Kingfisher
 
 class ImageCell: CollectionCell {
     
@@ -25,7 +26,7 @@ class ImageCell: CollectionCell {
     override func updateViews() {
         guard let model = self.model as? ImageCellModel else { return }
         
-        self.breedImageView.image = model.image
+        self.breedImageView.kf.setImage(with: model.imageURL)
     }
     
     // MARK: - Actions
