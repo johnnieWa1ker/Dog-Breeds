@@ -47,6 +47,20 @@ class DetailPresenter: ViperPresenter, DetailPresenterInput, DetailViewOutput {
     }
         
     // MARK: - Module functions
+    func makeSections() {
+        let mainSection = CollectionSectionModel()
+        
+        for image in self.viewModel.images {
+            let cellModel = ImageCellModel(image: image)
+            mainSection.rows.append(cellModel)
+        }
+        
+        if mainSection.rows.isEmpty {
+            self.view?.updateSections([])
+        } else {
+            self.view?.updateSections([mainSection])
+        }
+    }
 }
 
 // MARK: - DogUseCaseOutput
