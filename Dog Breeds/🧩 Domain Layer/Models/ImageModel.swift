@@ -12,9 +12,11 @@ public class ImageModel {
     
     // MARK: - Props
     var url: URL
+    var isFavorite: Bool
     
     // MARK: - Initialization
-    init(url: URL) {
+    init(url: URL, isFavorite: Bool) {
         self.url = url
+        self.isFavorite = isFavorite
     }
 }

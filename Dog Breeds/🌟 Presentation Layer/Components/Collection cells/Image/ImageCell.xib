@@ -22,13 +22,34 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aew-NZ-qPd">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35e-5K-bAa" userLabel="Like Button">
+                                <rect key="frame" x="236" y="180" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Dhe-Hu-kJK"/>
+                                    <constraint firstAttribute="width" secondItem="35e-5K-bAa" secondAttribute="height" multiplier="1:1" id="mSq-58-3y4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ0-VK-u4Y" userLabel="Share Button">
+                                <rect key="frame" x="236" y="236" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="BlW-iw-hJo"/>
+                                    <constraint firstAttribute="width" secondItem="wZ0-VK-u4Y" secondAttribute="height" multiplier="1:1" id="sRg-AS-0aB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wZ0-VK-u4Y" firstAttribute="width" secondItem="wZ0-VK-u4Y" secondAttribute="height" multiplier="1:1" id="9hk-Tf-5qD"/>
+                            <constraint firstAttribute="bottom" secondItem="wZ0-VK-u4Y" secondAttribute="bottom" constant="16" id="GCl-Ck-Eqt"/>
                             <constraint firstAttribute="trailing" secondItem="aew-NZ-qPd" secondAttribute="trailing" id="H3V-4m-hMD"/>
                             <constraint firstItem="aew-NZ-qPd" firstAttribute="top" secondItem="yZf-Ac-FSA" secondAttribute="top" id="M6e-9s-tRF"/>
                             <constraint firstItem="aew-NZ-qPd" firstAttribute="leading" secondItem="yZf-Ac-FSA" secondAttribute="leading" id="M9g-9V-sS7"/>
+                            <constraint firstAttribute="trailing" secondItem="wZ0-VK-u4Y" secondAttribute="trailing" constant="16" id="a7p-wL-LVW"/>
+                            <constraint firstAttribute="trailing" secondItem="35e-5K-bAa" secondAttribute="trailing" constant="16" id="ci8-5M-lve"/>
                             <constraint firstAttribute="bottom" secondItem="aew-NZ-qPd" secondAttribute="bottom" id="gZv-0A-sH0"/>
+                            <constraint firstItem="wZ0-VK-u4Y" firstAttribute="top" secondItem="35e-5K-bAa" secondAttribute="bottom" constant="8" id="x5N-eN-pXG"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -43,6 +64,8 @@
             <connections>
                 <outlet property="breedImageView" destination="aew-NZ-qPd" id="loN-zS-hYF"/>
                 <outlet property="containerView" destination="yZf-Ac-FSA" id="WNy-xE-Fpe"/>
+                <outlet property="likeButton" destination="35e-5K-bAa" id="J1Q-44-czM"/>
+                <outlet property="shareButton" destination="wZ0-VK-u4Y" id="w3T-Li-CZP"/>
             </connections>
             <point key="canvasLocation" x="163.19999999999999" y="159.67016491754123"/>
         </collectionViewCell>

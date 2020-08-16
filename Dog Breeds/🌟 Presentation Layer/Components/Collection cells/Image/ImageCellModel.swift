@@ -10,6 +10,10 @@ import UIKit
 
 class ImageCellModel: CollectionCellModel {
     
+    // MARK: - Typealias
+    typealias Like = (_ imageModel: ImageModel) -> Void
+    typealias Share = (_ imageURL: URL) -> Void
+    
     // MARK: - Setup functions
     public override var cellIdentifier: String {
         let id = ImageCell.identifier
@@ -22,10 +26,13 @@ class ImageCellModel: CollectionCellModel {
     }
     
     // MARK: - Props
-    let imageURL: URL
+    let image: ImageModel
+    
+    var like: Like?
+    var share: Share?
     
     // MARK: - Initialization
-    init(imageURL: URL) {
-        self.imageURL = imageURL
+    init(image: ImageModel) {
+        self.image = image
     }
 }

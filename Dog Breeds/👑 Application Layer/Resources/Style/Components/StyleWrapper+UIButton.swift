@@ -34,4 +34,32 @@ extension StyleWrapper where Element: UIButton {
         }
         return wrap
     }
+    
+    /// Button with main accent background, with heart icon
+    static func likeButton() -> StyleWrapper {
+        let wrap = StyleWrapper.wrap { button in
+            button.backgroundColor = AppTheme.mainAccent
+            button.tintColor = AppTheme.white
+            button.setTitle("", for: .normal)
+            button.setImage(UIImage(systemName: "heart"), for: .normal)
+            button.setImage(UIImage(systemName: "heart.fill"), for: .highlighted)
+            button.layer.cornerRadius = button.frame.width / 2
+            button.layer.masksToBounds = true
+        }
+        return wrap
+    }
+    
+    /// Button with main accent background, with arrow icon
+    static func shareButton() -> StyleWrapper {
+        let wrap = StyleWrapper.wrap { button in
+            button.backgroundColor = AppTheme.secondAccent
+            button.tintColor = AppTheme.white
+            button.setTitle("", for: .normal)
+            button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
+            button.setImage(UIImage(systemName: "square.and.arrow.up.fill"), for: .highlighted)
+            button.layer.cornerRadius = button.frame.width / 2
+            button.layer.masksToBounds = true
+        }
+        return wrap
+    }
 }

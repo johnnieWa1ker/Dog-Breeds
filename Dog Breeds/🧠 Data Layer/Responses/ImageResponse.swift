@@ -25,7 +25,7 @@ extension ImageResponse: RemoteMappable {
         for image in images {
             if let imageURLStr = image {
                 if let imageURL = URL(string: imageURLStr) {
-                    result.append(ImageModel(url: imageURL))
+                    result.append(ImageModel(url: imageURL, isFavorite: false))
                 }
             }
         }

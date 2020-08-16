@@ -57,7 +57,7 @@ class DetailPresenter: ViperPresenter, DetailPresenterInput, DetailViewOutput {
         let mainSection = CollectionSectionModel()
         
         for imageModel in self.viewModel.images {
-            let cellModel = ImageCellModel(imageURL: imageModel.url)
+            let cellModel = ImageCellModel(image: imageModel)
             mainSection.rows.append(cellModel)
         }
         

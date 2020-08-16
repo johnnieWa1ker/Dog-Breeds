@@ -40,18 +40,32 @@ class DetailViewController: ViperViewController, DetailViewInput {
         self.collectionView.registerCellNib(ImageCell.self)
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+//        self.collectionView.isPagingEnabled = true
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
+        
+        let paginationLayout = PaginationLayout()
+        self.collectionView.collectionViewLayout = paginationLayout
+        paginationLayout.scrollDirection = .horizontal
     }
     
     func setupActions() { }
     
-    func applyStyles() { }
+    func applyStyles() {
+        self.view.apply(.asBackground())
+        self.collectionView.apply(.standart())
+    }
     
     // MARK: - DetailViewInput
     override func setupInitialState(with viewModel: ViperViewModel) {
         super.setupInitialState(with: viewModel)
-        
+                
         self.setupComponents()
         self.setupActions()
+        
+        guard let viewModel = viewModel as? DetailViewModel else { return }
+        self.navigationItem.title = viewModel.breed.capitalized
     }
     
     func updateSections(_ sections: [CollectionSectionModel]) {
@@ -96,7 +110,40 @@ extension DetailViewController: UICollectionViewDataSource {
         
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+//        var size = self.sections[indexPath.section].rows[indexPath.row].cellSize
+//        size.width = self.view.bounds.width - 32
+//        return size
+        
+        var cellSize: CGSize = collectionView.bounds.size
+        
+        cellSize.width -= collectionView.contentInset.left
+        cellSize.width -= collectionView.contentInset.right
+        cellSize.height = cellSize.width
+        
+        return cellSize
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//
+//        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//
+//        return 8
+//    }
 }
 
 // MARK: - UICollectionViewDelegate
 extension DetailViewController: UICollectionViewDelegate { }
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension DetailViewController: UICollectionViewDelegateFlowLayout {
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let currentIndex: CGFloat = self.collectionView.contentOffset.x / self.collectionView.frame.size.width
+//        pageControl.currentPage = Int(currentIndex)
+//    }
+}

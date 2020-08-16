@@ -100,6 +100,8 @@
 		79780FD924E683D500E44176 /* ImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FD624E683D500E44176 /* ImageCellModel.swift */; };
 		79780FDA24E683D500E44176 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FD724E683D500E44176 /* ImageCell.swift */; };
 		79780FDB24E683D500E44176 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79780FD824E683D500E44176 /* ImageCell.xib */; };
+		79780FDF24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */; };
+		79780FE224E6F56700E44176 /* PaginationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FE124E6F56700E44176 /* PaginationLayout.swift */; };
 		79C76C3524E4927E00A0ECFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79C76C3424E4927E00A0ECFD /* README.md */; };
 		9935D4AB9E2F4E92C3F0FABA /* Pods_Dog_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB2C4CB861D8A4C648B41C8 /* Pods_Dog_Breeds.framework */; };
 /* End PBXBuildFile section */
@@ -205,6 +207,8 @@
 		79780FD624E683D500E44176 /* ImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellModel.swift; sourceTree = "<group>"; };
 		79780FD724E683D500E44176 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		79780FD824E683D500E44176 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+UICollectionView.swift"; sourceTree = "<group>"; };
+		79780FE124E6F56700E44176 /* PaginationLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLayout.swift; sourceTree = "<group>"; };
 		79C76C3424E4927E00A0ECFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CEF18E3AECCD309BDCAAE830 /* Pods-Dog Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Dog Breeds/Pods-Dog Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +297,7 @@
 		794DEB9324E4363600FFCE32 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				79780FE024E6F54C00E44176 /* PaginationLayout */,
 				79780FCD24E6835C00E44176 /* CollectionCell */,
 				794DEB9424E4363600FFCE32 /* UIImageView.swift */,
 				794DEB9624E4363600FFCE32 /* UITextField.swift */,
@@ -374,6 +379,7 @@
 				794DEBCA24E4363600FFCE32 /* StyleWrapper+UITableView.swift */,
 				794DEBCC24E4363600FFCE32 /* StyleWrapper+UITextField.swift */,
 				794DEBCE24E4363600FFCE32 /* StyleWrapper+UIView.swift */,
+				79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -680,6 +686,14 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		79780FE024E6F54C00E44176 /* PaginationLayout */ = {
+			isa = PBXGroup;
+			children = (
+				79780FE124E6F56700E44176 /* PaginationLayout.swift */,
+			);
+			path = PaginationLayout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -873,6 +887,7 @@
 				794DEC0924E4363600FFCE32 /* ReachabilityManager.swift in Sources */,
 				794DEB9024E4363600FFCE32 /* AppDelegate.swift in Sources */,
 				79780FD124E6835C00E44176 /* CollectionCell.swift in Sources */,
+				79780FE224E6F56700E44176 /* PaginationLayout.swift in Sources */,
 				794DEBF324E4363600FFCE32 /* InitialRouter.swift in Sources */,
 				794DEC0C24E4363600FFCE32 /* HTTPMethod.swift in Sources */,
 				794DEB9524E4363600FFCE32 /* UIImageView.swift in Sources */,
@@ -903,6 +918,7 @@
 				794DEB9224E4363600FFCE32 /* AppManager.swift in Sources */,
 				794DEBBF24E4363600FFCE32 /* SFPRO.swift in Sources */,
 				794DEC4024E43E0F00FFCE32 /* FavoriteRouter.swift in Sources */,
+				79780FDF24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift in Sources */,
 				794DEC0224E4363600FFCE32 /* ErrorHelper.swift in Sources */,
 				794DEB9724E4363600FFCE32 /* UITextField.swift in Sources */,
 				794DEBC424E4363600FFCE32 /* StyleWrapper.swift in Sources */,
