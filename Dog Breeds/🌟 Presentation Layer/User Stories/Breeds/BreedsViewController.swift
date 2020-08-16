@@ -14,7 +14,7 @@ protocol ListViewInput: ViperViewInput {
 }
 
 protocol ListViewOutput: ViperViewOutput {
-    func selectedSell(_ cellModel: TableCellIdentifiable)
+    func selectedCell(_ cellModel: TableCellIdentifiable)
 }
 
 class BreedsViewController: ViperViewController, ListViewInput {
@@ -31,6 +31,12 @@ class BreedsViewController: ViperViewController, ListViewInput {
     var sections: [TableSectionModel] = []
     
     // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.contentInsetAdjustmentBehavior = .never
+    }
+    
     override func viewDidLayoutSubviews() {
         self.applyStyles()
     }
@@ -108,6 +114,6 @@ extension BreedsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellModel = self.sections[indexPath.section].rows[indexPath.row]
-        self.output?.selectedSell(cellModel)
+        self.output?.selectedCell(cellModel)
     }
 }

@@ -11,6 +11,10 @@ import GKViper
 class SubbreedsViewModel: ViperViewModel {
     
     // MARK: - Props
+    let breed: DogModel
     
     // MARK: - Initialization
+    init(breed: DogModel) {
+        self.breed = breed
+    }
 }

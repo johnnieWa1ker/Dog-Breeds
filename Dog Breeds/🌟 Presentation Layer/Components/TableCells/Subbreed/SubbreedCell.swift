@@ -1,21 +1,20 @@
 //
-//  BreedCell.swift
+//  SubbreedCell.swift
 //  Dog Breeds
 //
-//  Created by Johnnie Walker on 12.08.2020.
+//  Created by Johnnie Walker on 16.08.2020.
 //  Copyright © 2020 JW. All rights reserved.
 //
 
 import GKViper
 import GKRepresentable
 
-class BreedCell: TableCell {
+class SubbreedCell: TableCell {
     
     // MARK: - Outlets
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var previewLabel: UILabel!
-    @IBOutlet private weak var breedLabel: UILabel!
     @IBOutlet private weak var subbreedLabel: UILabel!
+    @IBOutlet private weak var previewLabel: UILabel!
     
     // MARK: - Props
     
@@ -23,18 +22,15 @@ class BreedCell: TableCell {
     override func setupView() {
         self.apply(.clear())
         self.containerView.apply(.roundedAllCorners(AppTheme.secondBackground))
-        self.breedLabel.apply(.sfTitle3Semibold20(AppTheme.white, .left))
-        self.subbreedLabel.apply(.sfBodyRegular14(AppTheme.lightGray, .left))
+        self.subbreedLabel.apply(.sfTitle3Semibold20(AppTheme.white, .left))
     }
     
     override func updateViews() {
-        guard let model = self.model as? BreedCellModel else { return }
+        guard let model = self.model as? SubbreedCellModel else { return }
         
         self.previewLabel.text = String.randomEmoji()
         self.previewLabel.font = UIFont.systemFont(ofSize: 38.0)
-        self.breedLabel.text = model.breedModel.breed.capitalized
-        
-        self.subbreedLabel.text = "Found " + String(model.breedModel.subbreed.count) + " subbreeds"
+        self.subbreedLabel.text = model.subbreed.capitalized
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) { }
@@ -43,4 +39,4 @@ class BreedCell: TableCell {
 }
 
 // MARK: - Module functions
-extension BreedCell { }
+extension SubbreedCell { }

@@ -9,8 +9,8 @@
 import GKViper
 
 protocol BreedsRouterInput: ViperRouterInput {
-    func pushToSubbreedOf(breed name: String)
-    func pushToDetailOf(breed name: String)
+    func pushToSubbreedOf(_ breed: DogModel)
+    func pushToDetailOf(_ breed: String)
 }
 
 class BreedsRouter: ViperRouter, BreedsRouterInput {
@@ -24,24 +24,27 @@ class BreedsRouter: ViperRouter, BreedsRouterInput {
     }
     
     // MARK: - BreedsRouterInput
-    func pushToSubbreedOf(breed name: String) {
+    func pushToSubbreedOf(_ breed: DogModel) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
             
             let vc = SubbreedsAssembly.create()
-            _ = SubbreedsAssembly.configure(with: vc)
+            _ = SubbreedsAssembly.configure(with: vc,
+                                            breed: breed)
             vc.modalPresentationStyle = .fullScreen
             
             strongSelf.push(to: vc, animated: true)
         }
     }
     
-    func pushToDetailOf(breed name: String) {
+    func pushToDetailOf(_ breed: String) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
             
             let vc = DetailAssembly.create()
-            _ = DetailAssembly.configure(with: vc, breed: name, subbreed: nil)
+            _ = DetailAssembly.configure(with: vc,
+                                         breed: breed,
+                                         subbreed: nil)
             vc.modalPresentationStyle = .fullScreen
             
             strongSelf.push(to: vc, animated: true)

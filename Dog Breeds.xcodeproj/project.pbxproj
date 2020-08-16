@@ -102,6 +102,9 @@
 		79780FDB24E683D500E44176 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79780FD824E683D500E44176 /* ImageCell.xib */; };
 		79780FDF24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */; };
 		79780FE224E6F56700E44176 /* PaginationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FE124E6F56700E44176 /* PaginationLayout.swift */; };
+		79C292CA24E9611C00781243 /* SubbreedCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C292C724E9611C00781243 /* SubbreedCellModel.swift */; };
+		79C292CB24E9611C00781243 /* SubbreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C292C824E9611C00781243 /* SubbreedCell.swift */; };
+		79C292CC24E9611C00781243 /* SubbreedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C292C924E9611C00781243 /* SubbreedCell.xib */; };
 		79C76C3524E4927E00A0ECFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79C76C3424E4927E00A0ECFD /* README.md */; };
 		9935D4AB9E2F4E92C3F0FABA /* Pods_Dog_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB2C4CB861D8A4C648B41C8 /* Pods_Dog_Breeds.framework */; };
 /* End PBXBuildFile section */
@@ -209,6 +212,9 @@
 		79780FD824E683D500E44176 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+UICollectionView.swift"; sourceTree = "<group>"; };
 		79780FE124E6F56700E44176 /* PaginationLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLayout.swift; sourceTree = "<group>"; };
+		79C292C724E9611C00781243 /* SubbreedCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubbreedCellModel.swift; sourceTree = "<group>"; };
+		79C292C824E9611C00781243 /* SubbreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubbreedCell.swift; sourceTree = "<group>"; };
+		79C292C924E9611C00781243 /* SubbreedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubbreedCell.xib; sourceTree = "<group>"; };
 		79C76C3424E4927E00A0ECFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CEF18E3AECCD309BDCAAE830 /* Pods-Dog Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Dog Breeds/Pods-Dog Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -445,6 +451,7 @@
 		794DEBDE24E4363600FFCE32 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
+				79C292C024E9575600781243 /* Subbreed */,
 				794DEC4324E4489D00FFCE32 /* Breed */,
 			);
 			path = TableCells;
@@ -694,6 +701,16 @@
 			path = PaginationLayout;
 			sourceTree = "<group>";
 		};
+		79C292C024E9575600781243 /* Subbreed */ = {
+			isa = PBXGroup;
+			children = (
+				79C292C824E9611C00781243 /* SubbreedCell.swift */,
+				79C292C924E9611C00781243 /* SubbreedCell.xib */,
+				79C292C724E9611C00781243 /* SubbreedCellModel.swift */,
+			);
+			path = Subbreed;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -776,6 +793,7 @@
 				794DEBBB24E4363600FFCE32 /* SF-Pro-Display-Regular.otf in Resources */,
 				794DEC6424E4700100FFCE32 /* SubbreedsViewController.xib in Resources */,
 				794DEB8524E4363600FFCE32 /* Podfile in Resources */,
+				79C292CC24E9611C00781243 /* SubbreedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +875,7 @@
 				794DEC2624E4384C00FFCE32 /* DogResponse.swift in Sources */,
 				794DEBC224E4363600FFCE32 /* Stylable.swift in Sources */,
 				794DEBD424E4363600FFCE32 /* AppThemeManager.swift in Sources */,
+				79C292CB24E9611C00781243 /* SubbreedCell.swift in Sources */,
 				794DEBD224E4363600FFCE32 /* AppTheme.swift in Sources */,
 				794DEBF524E4363600FFCE32 /* InitialViewController.swift in Sources */,
 				794DEBCD24E4363600FFCE32 /* StyleWrapper+UITextField.swift in Sources */,
@@ -907,6 +926,7 @@
 				794DEBE324E4363600FFCE32 /* DisconnectView.swift in Sources */,
 				79780FD324E6835C00E44176 /* CollectionCellModel.swift in Sources */,
 				794DEB9B24E4363600FFCE32 /* ViperPresenter.swift in Sources */,
+				79C292CA24E9611C00781243 /* SubbreedCellModel.swift in Sources */,
 				794DEC4224E43E0F00FFCE32 /* FavoritePresenter.swift in Sources */,
 				794DEC1C24E437BB00FFCE32 /* DogUseCase.swift in Sources */,
 				794DEC1D24E437BB00FFCE32 /* DogModel.swift in Sources */,
