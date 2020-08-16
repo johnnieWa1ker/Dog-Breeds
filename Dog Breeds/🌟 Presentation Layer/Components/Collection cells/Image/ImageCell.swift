@@ -28,7 +28,7 @@ class ImageCell: CollectionCell {
         self.likeButton.apply(.likeButton())
         self.shareButton.apply(.shareButton())
         
-        self.likeButton.addTarget(self, action: #selector(self.shareButtonAction), for: .touchUpInside)
+        self.likeButton.addTarget(self, action: #selector(self.likeButtonAction), for: .touchUpInside)
         self.shareButton.addTarget(self, action: #selector(self.shareButtonAction), for: .touchUpInside)
     }
     
@@ -42,6 +42,7 @@ class ImageCell: CollectionCell {
     @objc
     func likeButtonAction() {
         guard let model = self.model as? ImageCellModel else { return }
+        model.image.isFavorite = true
         model.like?(model.image)
     }
     

@@ -7,8 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubbreedsViewController" customModule="DEMO_API_Usage" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubbreedsViewController" customModule="Dog_Breeds" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="EPT-41-Hux" id="PNf-nC-oY9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rz8-f9-Cv3"/>
             </connections>
         </placeholder>
@@ -17,15 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bubbreedsView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUt-Ib-75R">
-                    <rect key="frame" x="128" y="396" width="119" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EPT-41-Hux">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EPT-41-Hux" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1cx-vg-79U"/>
+                <constraint firstItem="EPT-41-Hux" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9qa-10-5VD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EPT-41-Hux" secondAttribute="trailing" id="KSK-p0-7Ax"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EPT-41-Hux" secondAttribute="bottom" id="t1H-Of-N0X"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="138" y="155"/>
         </view>

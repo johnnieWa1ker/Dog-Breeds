@@ -58,6 +58,12 @@ class DetailPresenter: ViperPresenter, DetailPresenterInput, DetailViewOutput {
         
         for imageModel in self.viewModel.images {
             let cellModel = ImageCellModel(image: imageModel)
+            cellModel.like = { image in
+                
+            }
+            cellModel.share = { url in
+                
+            }
             mainSection.rows.append(cellModel)
         }
         
