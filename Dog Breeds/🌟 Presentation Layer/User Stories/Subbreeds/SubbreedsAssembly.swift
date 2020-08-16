@@ -17,8 +17,8 @@ enum SubbreedsAssembly {
     }
     
     // Create and link modules with controller, return presenter input
-    static func configure(with reference: SubbreedsViewController) -> SubbreedsPresenterInput {
-        let presenter = SubbreedsPresenter()
+    static func configure(with reference: SubbreedsViewController, breed: DogModel) -> SubbreedsPresenterInput {
+        let presenter = SubbreedsPresenter(breed: breed)
         
         let router = SubbreedsRouter()
         router._mainController = reference

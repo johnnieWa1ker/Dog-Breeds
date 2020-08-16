@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import GKRepresentable
 
 protocol SubbreedsPresenterInput: ViperPresenterInput { }
 
@@ -30,16 +31,37 @@ class SubbreedsPresenter: ViperPresenter, SubbreedsPresenterInput, SubbreedsView
     var viewModel: SubbreedsViewModel
     
     // MARK: - Initialization
-    override init() {
-        self.viewModel = SubbreedsViewModel()
+    init(breed: DogModel) {
+        self.viewModel = SubbreedsViewModel(breed: breed)
     }
     
     // MARK: - SubbreedsPresenterInput
+    func selectedCell(_ cellModel: TableCellIdentifiable) {
+        if let cell = cellModel as? SubbreedCellModel {
+            self.router?.pushToDetailOf(self.viewModel.breed.breed, cell.subbreed)
+        }
+    }
     
     // MARK: - SubbreedsViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
+        self.makeSections()
     }
         
     // MARK: - Module functions
+    func makeSections() {
+        let mainSection = TableSectionModel()
+        
+        for subbreed in self.viewModel.breed.subbreed {
+            let cellModel = SubbreedCellModel(subbreed: subbreed)
+//            let cellModel = BreedCellModel(breed: DogModel(breed: "123", subbreed: ["1234", "4524635768i"]))
+            mainSection.rows.append(cellModel)
+        }
+        
+        if mainSection.rows.isEmpty {
+            self.view?.updateSections([])
+        } else {
+            self.view?.updateSections([mainSection])
+        }
+    }
 }

@@ -1,19 +1,19 @@
 //
-//  BreedCellModel.swift
+//  SubbreedCellModel.swift
 //  Dog Breeds
 //
-//  Created by Johnnie Walker on 12.08.2020.
+//  Created by Johnnie Walker on 16.08.2020.
 //  Copyright © 2020 JW. All rights reserved.
 //
 
 import UIKit
 import GKRepresentable
 
-class BreedCellModel: TableCellModel {
+class SubbreedCellModel: TableCellModel {
     
     // MARK: - Setup functions
     public override var cellIdentifier: String {
-        let id = BreedCell.identifier
+        let id = SubbreedCell.identifier
         return id
     }
     
@@ -23,10 +23,10 @@ class BreedCellModel: TableCellModel {
     }
     
     // MARK: - Props
-    let breedModel: DogModel
+    let subbreed: String
     
     // MARK: - Initialization
-    init(breed: DogModel) {
-        self.breedModel = breed
+    init(subbreed: String) {
+        self.subbreed = subbreed
     }
 }

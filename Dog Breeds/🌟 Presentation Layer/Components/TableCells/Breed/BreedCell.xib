@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="87" id="Kc4-Ko-9BV" customClass="BreedCell" customModule="DEMO_API_Usage" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="87" id="Kc4-Ko-9BV" customClass="BreedCell" customModule="Dog_Breeds" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kc4-Ko-9BV" id="IcC-g0-YrV">
@@ -43,6 +43,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1Pd-OD-1i8" secondAttribute="trailing" constant="16" id="CwD-ZC-8LU"/>
+                            <constraint firstAttribute="height" constant="79" id="FCG-t4-UKs"/>
                             <constraint firstItem="nqX-UG-aQc" firstAttribute="leading" secondItem="UqV-0N-0HI" secondAttribute="trailing" constant="16" id="I2k-3B-2jU"/>
                             <constraint firstItem="nqX-UG-aQc" firstAttribute="top" secondItem="frv-nT-ex8" secondAttribute="top" constant="16" id="P0K-Ii-hXY"/>
                             <constraint firstItem="UqV-0N-0HI" firstAttribute="centerY" secondItem="frv-nT-ex8" secondAttribute="centerY" id="cUU-Ot-UkJ"/>

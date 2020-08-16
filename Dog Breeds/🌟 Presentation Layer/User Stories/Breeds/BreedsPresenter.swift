@@ -40,12 +40,12 @@ class BreedsPresenter: ViperPresenter, BreedsPresenterInput, ListViewOutput {
     }
     
     // MARK: - BreedsPresenterInput
-    func selectedSell(_ cellModel: TableCellIdentifiable) {
+    func selectedCell(_ cellModel: TableCellIdentifiable) {
         if let cell = cellModel as? BreedCellModel {
-            if cell.subbreed.isEmpty {
-                self.router?.pushToDetailOf(breed: cell.breed)
+            if cell.breedModel.subbreed.isEmpty {
+                self.router?.pushToDetailOf(cell.breedModel.breed)
             } else {
-                self.router?.pushToSubbreedOf(breed: cell.breed)
+                self.router?.pushToSubbreedOf(cell.breedModel)
             }
         }
     }
@@ -63,15 +63,15 @@ class BreedsPresenter: ViperPresenter, BreedsPresenterInput, ListViewOutput {
         
         guard let breeds = self.viewModel.breeds else { return }
         for breed in breeds {
-            let cellModel = BreedCellModel(breed: breed.breed, subbreed: breed.subbreed)
+            let cellModel = BreedCellModel(breed: breed)
             mainSection.rows.append(cellModel)
         }
         
         mainSection.rows.sort { (firstModel, secondModel) -> Bool in
             let firstCellModel = firstModel as? BreedCellModel
             let secondCellModel = secondModel as? BreedCellModel
-            guard let firstCellBreed = firstCellModel?.breed else { return false }
-            guard let secondCellBreed = secondCellModel?.breed else { return false }
+            guard let firstCellBreed = firstCellModel?.breedModel.breed else { return false }
+            guard let secondCellBreed = secondCellModel?.breedModel.breed else { return false }
             
             return firstCellBreed < secondCellBreed ? true : false
         }
