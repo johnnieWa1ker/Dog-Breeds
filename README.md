@@ -5,8 +5,8 @@ A test project in which I render the data retrieved from the dog.ceo API.
 In it, I want to focus on using the UITableView and UICollectionView based interfaces.
 
   <p float="right">
-  <img src="Dog%20Breeds/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/Demo/demo1.imageset/demo1.png" width="32%"/>
-  <img src="Dog%20Breeds/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/Demo/demo2.imageset/demo2.png" width="32%"/>
+  <img src="Dog%20Breeds/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/Demo/demo-1.imageset/demo-1.png" width="32%"/>
+  <img src="Dog%20Breeds/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/Demo/demo-2.imageset/demo-2.png" width="32%"/>
   </p>
   
 
