@@ -19,19 +19,16 @@ class ImageResponse: Codable {
 extension ImageResponse: RemoteMappable {
     func mapResponseToDomain() -> AnyObject? {
         
-        var result: [URL] = []
+        var result: [ImageModel] = []
         
         guard let images = self.images else { return nil }
         for image in images {
             if let imageURLStr = image {
                 if let imageURL = URL(string: imageURLStr) {
-                    result.append(imageURL)
+                    result.append(ImageModel(url: imageURL, isFavorite: false))
                 }
             }
         }
-        
         return result as AnyObject
     }
 }
-
-

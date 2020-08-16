@@ -44,16 +44,37 @@ class DetailPresenter: ViperPresenter, DetailPresenterInput, DetailViewOutput {
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
         self.dogUseCase.getImageOfBreed(self.viewModel.breed)
+        
+        if viewModel.subbreed != nil {
+            self.dogUseCase.getImageOfBreed(self.viewModel.breed)
+        } else if let subbreed = self.viewModel.subbreed {
+            self.dogUseCase.getImageOfSubbreed(self.viewModel.breed, subbreed)
+        }
     }
         
     // MARK: - Module functions
+    func makeSections() {
+        let mainSection = CollectionSectionModel()
+        
+        for imageModel in self.viewModel.images {
+            let cellModel = ImageCellModel(image: imageModel)
+            mainSection.rows.append(cellModel)
+        }
+        
+        if mainSection.rows.isEmpty {
+            self.view?.updateSections([])
+        } else {
+            self.view?.updateSections([mainSection])
+        }
+    }
 }
 
 // MARK: - DogUseCaseOutput
 extension DetailPresenter: DogUseCaseOutput {
     
-    func provideImageOfBreed(_ result: [ImageModel]) {
-        print("[DEBUG] \(String(describing: result))")
+    func provideImage(_ result: [ImageModel]) {
+        self.viewModel.images = result
+        self.makeSections()
     }
 
     func noInternetConnection() {

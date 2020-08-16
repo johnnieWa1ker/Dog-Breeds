@@ -94,6 +94,14 @@
 		794DEC6524E4700100FFCE32 /* SubbreedsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DEC5F24E4700100FFCE32 /* SubbreedsPresenter.swift */; };
 		794DEC6724E4725A00FFCE32 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DEC6624E4725A00FFCE32 /* ImageModel.swift */; };
 		794DEC6924E4726B00FFCE32 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DEC6824E4726B00FFCE32 /* ImageResponse.swift */; };
+		79780FD124E6835C00E44176 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FCE24E6835C00E44176 /* CollectionCell.swift */; };
+		79780FD224E6835C00E44176 /* CollectionSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FCF24E6835C00E44176 /* CollectionSectionModel.swift */; };
+		79780FD324E6835C00E44176 /* CollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FD024E6835C00E44176 /* CollectionCellModel.swift */; };
+		79780FD924E683D500E44176 /* ImageCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FD624E683D500E44176 /* ImageCellModel.swift */; };
+		79780FDA24E683D500E44176 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FD724E683D500E44176 /* ImageCell.swift */; };
+		79780FDB24E683D500E44176 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79780FD824E683D500E44176 /* ImageCell.xib */; };
+		79780FDF24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */; };
+		79780FE224E6F56700E44176 /* PaginationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79780FE124E6F56700E44176 /* PaginationLayout.swift */; };
 		79C76C3524E4927E00A0ECFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 79C76C3424E4927E00A0ECFD /* README.md */; };
 		9935D4AB9E2F4E92C3F0FABA /* Pods_Dog_Breeds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB2C4CB861D8A4C648B41C8 /* Pods_Dog_Breeds.framework */; };
 /* End PBXBuildFile section */
@@ -193,6 +201,14 @@
 		794DEC5F24E4700100FFCE32 /* SubbreedsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubbreedsPresenter.swift; sourceTree = "<group>"; };
 		794DEC6624E4725A00FFCE32 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		794DEC6824E4726B00FFCE32 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
+		79780FCE24E6835C00E44176 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		79780FCF24E6835C00E44176 /* CollectionSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSectionModel.swift; sourceTree = "<group>"; };
+		79780FD024E6835C00E44176 /* CollectionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellModel.swift; sourceTree = "<group>"; };
+		79780FD624E683D500E44176 /* ImageCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellModel.swift; sourceTree = "<group>"; };
+		79780FD724E683D500E44176 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		79780FD824E683D500E44176 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+UICollectionView.swift"; sourceTree = "<group>"; };
+		79780FE124E6F56700E44176 /* PaginationLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLayout.swift; sourceTree = "<group>"; };
 		79C76C3424E4927E00A0ECFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		CEF18E3AECCD309BDCAAE830 /* Pods-Dog Breeds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog Breeds.debug.xcconfig"; path = "Target Support Files/Pods-Dog Breeds/Pods-Dog Breeds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,6 +297,8 @@
 		794DEB9324E4363600FFCE32 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				79780FE024E6F54C00E44176 /* PaginationLayout */,
+				79780FCD24E6835C00E44176 /* CollectionCell */,
 				794DEB9424E4363600FFCE32 /* UIImageView.swift */,
 				794DEB9624E4363600FFCE32 /* UITextField.swift */,
 				794DEB9824E4363600FFCE32 /* UIView.swift */,
@@ -361,6 +379,7 @@
 				794DEBCA24E4363600FFCE32 /* StyleWrapper+UITableView.swift */,
 				794DEBCC24E4363600FFCE32 /* StyleWrapper+UITextField.swift */,
 				794DEBCE24E4363600FFCE32 /* StyleWrapper+UIView.swift */,
+				79780FDE24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -407,6 +426,7 @@
 		794DEBDA24E4363600FFCE32 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				79780FD424E6838300E44176 /* Collection cells */,
 				794DEBDB24E4363600FFCE32 /* Custom */,
 				794DEBDE24E4363600FFCE32 /* TableCells */,
 				794DEBE024E4363600FFCE32 /* Views */,
@@ -638,6 +658,42 @@
 			path = Subbreeds;
 			sourceTree = "<group>";
 		};
+		79780FCD24E6835C00E44176 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				79780FCE24E6835C00E44176 /* CollectionCell.swift */,
+				79780FCF24E6835C00E44176 /* CollectionSectionModel.swift */,
+				79780FD024E6835C00E44176 /* CollectionCellModel.swift */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		79780FD424E6838300E44176 /* Collection cells */ = {
+			isa = PBXGroup;
+			children = (
+				79780FD524E6838F00E44176 /* Image */,
+			);
+			path = "Collection cells";
+			sourceTree = "<group>";
+		};
+		79780FD524E6838F00E44176 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				79780FD724E683D500E44176 /* ImageCell.swift */,
+				79780FD824E683D500E44176 /* ImageCell.xib */,
+				79780FD624E683D500E44176 /* ImageCellModel.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		79780FE024E6F54C00E44176 /* PaginationLayout */ = {
+			isa = PBXGroup;
+			children = (
+				79780FE124E6F56700E44176 /* PaginationLayout.swift */,
+			);
+			path = PaginationLayout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -713,6 +769,7 @@
 				794DEC4124E43E0F00FFCE32 /* FavoriteViewController.xib in Resources */,
 				794DEBB924E4363600FFCE32 /* SF-Pro-Display-Medium.otf in Resources */,
 				794DEBF724E4363600FFCE32 /* InitialViewController.xib in Resources */,
+				79780FDB24E683D500E44176 /* ImageCell.xib in Resources */,
 				79C76C3524E4927E00A0ECFD /* README.md in Resources */,
 				794DEBBD24E4363600FFCE32 /* SF-Pro-Display-Light.otf in Resources */,
 				794DEBB124E4363600FFCE32 /* Assets.xcassets in Resources */,
@@ -820,6 +877,7 @@
 				794DEC6724E4725A00FFCE32 /* ImageModel.swift in Sources */,
 				794DEBE924E4363600FFCE32 /* BasicNavigationController.swift in Sources */,
 				794DEBFF24E4363600FFCE32 /* NoticeParam.swift in Sources */,
+				79780FD224E6835C00E44176 /* CollectionSectionModel.swift in Sources */,
 				794DEC3E24E43E0F00FFCE32 /* FavoriteViewController.swift in Sources */,
 				794DEC5424E46D8000FFCE32 /* DetailViewController.swift in Sources */,
 				794DEC3024E43D4000FFCE32 /* BreedsViewModel.swift in Sources */,
@@ -828,6 +886,8 @@
 				794DEBF124E4363600FFCE32 /* InitialPresenter.swift in Sources */,
 				794DEC0924E4363600FFCE32 /* ReachabilityManager.swift in Sources */,
 				794DEB9024E4363600FFCE32 /* AppDelegate.swift in Sources */,
+				79780FD124E6835C00E44176 /* CollectionCell.swift in Sources */,
+				79780FE224E6F56700E44176 /* PaginationLayout.swift in Sources */,
 				794DEBF324E4363600FFCE32 /* InitialRouter.swift in Sources */,
 				794DEC0C24E4363600FFCE32 /* HTTPMethod.swift in Sources */,
 				794DEB9524E4363600FFCE32 /* UIImageView.swift in Sources */,
@@ -838,23 +898,27 @@
 				794DEB8C24E4363600FFCE32 /* AppConfiguration.swift in Sources */,
 				794DEBDD24E4363600FFCE32 /* Loader.swift in Sources */,
 				794DEB9D24E4363600FFCE32 /* ViperViewController.swift in Sources */,
+				79780FDA24E683D500E44176 /* ImageCell.swift in Sources */,
 				794DEB9924E4363600FFCE32 /* UIView.swift in Sources */,
 				794DEC2524E4384C00FFCE32 /* DogDataRouter.swift in Sources */,
 				794DEB8E24E4363600FFCE32 /* AppDefaults.swift in Sources */,
 				794DEC5824E46D8000FFCE32 /* DetailPresenter.swift in Sources */,
 				794DEC6124E4700100FFCE32 /* SubbreedsViewController.swift in Sources */,
 				794DEBE324E4363600FFCE32 /* DisconnectView.swift in Sources */,
+				79780FD324E6835C00E44176 /* CollectionCellModel.swift in Sources */,
 				794DEB9B24E4363600FFCE32 /* ViperPresenter.swift in Sources */,
 				794DEC4224E43E0F00FFCE32 /* FavoritePresenter.swift in Sources */,
 				794DEC1C24E437BB00FFCE32 /* DogUseCase.swift in Sources */,
 				794DEC1D24E437BB00FFCE32 /* DogModel.swift in Sources */,
 				794DEBCB24E4363600FFCE32 /* StyleWrapper+UITableView.swift in Sources */,
+				79780FD924E683D500E44176 /* ImageCellModel.swift in Sources */,
 				794DEC6524E4700100FFCE32 /* SubbreedsPresenter.swift in Sources */,
 				794DEC3224E43D4000FFCE32 /* BreedsAssembly.swift in Sources */,
 				794DEC3324E43D4000FFCE32 /* BreedsRouter.swift in Sources */,
 				794DEB9224E4363600FFCE32 /* AppManager.swift in Sources */,
 				794DEBBF24E4363600FFCE32 /* SFPRO.swift in Sources */,
 				794DEC4024E43E0F00FFCE32 /* FavoriteRouter.swift in Sources */,
+				79780FDF24E6DEBD00E44176 /* StyleWrapper+UICollectionView.swift in Sources */,
 				794DEC0224E4363600FFCE32 /* ErrorHelper.swift in Sources */,
 				794DEB9724E4363600FFCE32 /* UITextField.swift in Sources */,
 				794DEBC424E4363600FFCE32 /* StyleWrapper.swift in Sources */,

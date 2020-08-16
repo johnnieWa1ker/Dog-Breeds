@@ -32,7 +32,7 @@ class BasicNavigationController: UINavigationController {
         self.navigationBar.backgroundColor = AppTheme.mainBackground
         self.navigationBar.isUserInteractionEnabled = true
         self.navigationBar.tintColor = AppTheme.mainAccent
-        self.navigationBar.titleTextAttributes = [.font: SFPRO.semibold.font(size: 16), .foregroundColor: AppTheme.white]
+        self.navigationBar.titleTextAttributes = [.font: SFPRO.bold.font(size: 16), .foregroundColor: AppTheme.mainAccent]
         self.navigationBar.largeTitleTextAttributes =  [.font: SFPRO.bold.font(size: 46), .foregroundColor: AppTheme.white]
         self.navigationBar.prefersLargeTitles = true
     }

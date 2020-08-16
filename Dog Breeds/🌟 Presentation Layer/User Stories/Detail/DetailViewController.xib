@@ -7,8 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DEMO_API_Usage" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Dog_Breeds" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="2Kl-QM-7Ca" id="Jtr-8x-n56"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rz8-f9-Cv3"/>
             </connections>
         </placeholder>
@@ -17,15 +18,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="detailView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3a-zE-BbF">
-                    <rect key="frame" x="148" y="396" width="79" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Kl-QM-7Ca">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="abj-ZW-ogd" customClass="PaginationLayout" customModule="Dog_Breeds" customModuleProvider="target">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2Kl-QM-7Ca" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HDk-k3-zqH"/>
+                <constraint firstItem="2Kl-QM-7Ca" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="OPm-bz-dzB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Kl-QM-7Ca" secondAttribute="trailing" id="PZk-cv-KUG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2Kl-QM-7Ca" secondAttribute="bottom" id="q0Y-a5-tV8"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="138" y="154"/>
         </view>
